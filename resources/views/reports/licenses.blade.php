@@ -60,8 +60,8 @@
                                 </td>
                                 <td>{{ $license->seats }}</td>
                                 <td>{{ $license->remaincount() }}</td>
-                                <td>{{ $license->expiration_date }}</td>
-                                <td>{{ $license->purchase_date }}</td>
+                                <td>{{ jdate($license->expiration_date) }}</td>
+                                <td>{{ jdate($license->purchase_date) }}</td>
                                 <td class="text-right">
                                     {{ $snipeSettings->default_currency }}{{ \App\Helpers\Helper::formatCurrencyOutput($license->purchase_cost) }}
                                 </td>

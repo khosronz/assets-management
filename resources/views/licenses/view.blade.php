@@ -166,7 +166,7 @@
                     @if (isset($license->expiration_date))
                     <tr>
                       <td>{{ trans('admin/licenses/form.expiration') }}:</td>
-                      <td>{{ $license->expiration_date }}</td>
+                      <td>{{ jdate($license->expiration_date) }}</td>
                     </tr>
                     @endif
 
@@ -187,7 +187,7 @@
                           {{ trans('admin/hardware/form.depreciates_on') }}:
                         </td>
                         <td>
-                          {{ $license->depreciated_date()->format("Y-m-d") }}
+                          {{ jdate($license->depreciated_date()->format("Y-m-d")) }}
                         </td>
                       </tr>
 
@@ -220,7 +220,7 @@
                     @if (isset($license->purchase_date))
                     <tr>
                       <td>{{ trans('general.purchase_date') }}:</td>
-                      <td>{{ $license->purchase_date }}</td>
+                      <td>{{ jdate($license->purchase_date) }}</td>
                     </tr>
                     @endif
 
