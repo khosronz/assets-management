@@ -6628,11 +6628,11 @@ button.close {
 }
 
 .pull-right {
-    float: right !important
+    float: left !important
 }
 
 .pull-left {
-    float: left !important
+    float: right !important
 }
 
 .hide {
@@ -8853,7 +8853,7 @@ a:active, a:focus, a:hover {
     transition: all .3s linear;
     position: absolute;
     top: -10px;
-    right: 10px;
+    left: 10px;
     z-index: 0;
     font-size: 90px;
     color: rgba(0, 0, 0, .15)
@@ -9126,7 +9126,7 @@ a:active, a:focus, a:hover {
 
 .box-header > .box-tools {
     position: absolute;
-    right: 10px;
+    left: 10px;
     top: 5px
 }
 

@@ -142,11 +142,11 @@ $(document).ready(function () {
         if (slideoutMenu.hasClass("open")) {
          slideoutMenu.show();
             slideoutMenu.animate({
-                right: "0px"
+                left: "0px"
             });
         } else {
             slideoutMenu.animate({
-                right: -slideoutMenuWidth
+                left: -slideoutMenuWidth
             }, "-350px");
          slideoutMenu.fadeOut();
         }
