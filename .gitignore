@@ -5,6 +5,7 @@
 /bin/
 /bootstrap/compiled.php
 /node_modules
+/bower_components
 /vendor
 app/database/*.sqlite
 app/storage/meta/services.json
