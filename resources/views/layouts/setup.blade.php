@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="rtl" lang="fa">
     <head>
       <title>
         @section('title')
