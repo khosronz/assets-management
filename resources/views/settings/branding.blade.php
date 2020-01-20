@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Branding Settings
+    {{ trans('admin/settings/general.Update Branding Settings') }}
     @parent
 @stop
 
@@ -34,7 +34,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-copyright"></i> Branding
+                        <i class="fa fa-copyright"></i> {{ trans('admin/settings/general.brand') }}
                     </h4>
                 </div>
                 <div class="box-body">
@@ -157,7 +157,7 @@
                                     {!! $errors->first('custom_css', '<span class="alert-msg">:message</span>') !!}
                                     <p class="help-block">{{ trans('general.lock_passwords') }}</p>
                                 @else
-                                    {{ Form::textarea('custom_css', Input::old('custom_css', $setting->custom_css), array('class' => 'form-control','placeholder' => 'Add your custom CSS')) }}
+                                    {{ Form::textarea('custom_css', Input::old('custom_css', $setting->custom_css), array('class' => 'form-control','placeholder' => 'CSS را اضافه کنید')) }}
                                     {!! $errors->first('custom_css', '<span class="alert-msg">:message</span>') !!}
                                 @endif
                                 <p class="help-block">{{ trans('admin/settings/general.custom_css_help') }}</p>
@@ -210,7 +210,7 @@
                                     {{ Form::textarea('footer_text', Input::old('footer_text', $setting->footer_text), array('class' => 'form-control', 'rows' => '4', 'placeholder' => 'Optional footer text','disabled'=>'disabled')) }}
                                     <p class="help-block">{{ trans('general.lock_passwords') }}</p>
                                 @else
-                                    {{ Form::textarea('footer_text', Input::old('footer_text', $setting->footer_text), array('class' => 'form-control','rows' => '4','placeholder' => 'Optional footer text')) }}
+                                    {{ Form::textarea('footer_text', Input::old('footer_text', $setting->footer_text), array('class' => 'form-control','rows' => '4','placeholder' => 'متن اختیاری پاصفحه')) }}
                                 @endif
                                 <p class="help-block">{!! trans('admin/settings/general.footer_text_help') !!}</p>
                                  {!! $errors->first('footer_text', '<span class="alert-msg">:message</span>') !!}
