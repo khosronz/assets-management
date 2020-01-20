@@ -220,7 +220,7 @@
                     @if (isset($license->purchase_date))
                     <tr>
                       <td>{{ trans('general.purchase_date') }}:</td>
-                      <td>{{ jdate($license->purchase_date) }}</td>
+                      <td>{{ jdate($license->purchase_date)->format('date') }}</td>
                     </tr>
                     @endif
 

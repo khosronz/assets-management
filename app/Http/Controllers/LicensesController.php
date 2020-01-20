@@ -164,6 +164,15 @@ class LicensesController extends Controller
             return redirect()->route('licenses.index')->with('error', trans('admin/licenses/message.does_not_exist'));
         }
 
+
+        $expiration_date=$request->input('expiration_date');
+        $expiration_date = explode ("-", $expiration_date);
+        $day= $expiration_date[2];
+        $month= $expiration_date[1];
+        $year= $expiration_date[0];
+        $expiration_date= \Morilog\Jalali\CalendarUtils::toGregorian($year,$month,$day);
+        dd($expiration_date);
+
         $this->authorize('update', $license);
 
         $license->company_id        = Company::getIdForCurrentUser($request->input('company_id'));
