@@ -18,8 +18,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.branding.index') }}" class="btn btn-lg btn-white"><i class="fa fa-copyright fa-3x"></i></a>
           <br>
-          Branding
-          <p class="help-block">Logo, Site Name</p>
+          {{ trans('admin/settings/general.brand') }}
+          <p class="help-block">{{ trans('admin/settings/general.Logo, Site Name') }}</p>
         </div>
       </div>
     </div>
@@ -30,8 +30,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.general.index') }}" class="btn btn-lg btn-white"><i class="fa fa-wrench fa-3x"></i></a>
           <br>
-          General Settings
-          <p class="help-block">Default EULA and more</p>
+          {{ trans('admin/settings/general.general_settings') }}
+          <p class="help-block"> {{ trans('admin/settings/general.Default EULA and more') }}</p>
         </div>
       </div>
     </div>
@@ -42,8 +42,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.security.index') }}" class="btn btn-lg btn-white"><i class="fa fa-lock fa-3x"></i></a>
           <br>
-          Security
-          <p class="help-block">Two-factor, Password Restrictions</p>
+          {{ trans('admin/settings/general.Security') }}
+          <p class="help-block">{{ trans('admin/settings/general.Two-factor, Password Restrictions') }}</p>
         </div>
       </div>
     </div>
@@ -53,8 +53,8 @@
         <div class="box-body text-center">
           <a href="{{ route('groups.index') }}" class="btn btn-lg btn-white"><i class="fa fa-group fa-3x"></i></a>
           <br>
-          Groups
-          <p class="help-block">Account permission groups</p>
+          {{ trans('admin/settings/general.Groups') }}
+          <p class="help-block">{{ trans('admin/settings/general.Account permission groups') }}</p>
         </div>
       </div>
     </div>
@@ -65,8 +65,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.localization.index') }}" class="btn btn-lg btn-white"><i class="fa fa-globe fa-3x"></i></a>
           <br>
-          Localization
-          <p class="help-block">Language, date display</p>
+          {{ trans('admin/settings/general.Localization') }}
+          <p class="help-block">{{ trans('admin/settings/general.Language, date display') }}</p>
 
         </div>
       </div>
@@ -78,8 +78,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.alerts.index') }}" class="btn btn-lg btn-white"><i class="fa fa-bell fa-3x"></i></a>
           <br>
-          Notifications
-          <p class="help-block">Email alerts</p>
+          {{ trans('admin/settings/general.Notifications') }}
+          <p class="help-block">{{ trans('admin/settings/general.Email alerts') }}</p>
         </div>
       </div>
     </div>
@@ -89,8 +89,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.slack.index') }}" class="btn btn-lg btn-white"><i class="fa fa-slack fa-3x"></i></a>
           <br>
-          Slack
-          <p class="help-block">Slack settings</p>
+          {{ trans('admin/settings/general.Slack') }}
+          <p class="help-block">{{ trans('admin/settings/general.Slack settings') }}</p>
         </div>
       </div>
     </div>
@@ -100,8 +100,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.asset_tags.index') }}" class="btn btn-lg btn-white"><i class="fa fa-list-ol fa-3x"></i></a>
           <br>
-          Asset Tags
-          <p class="help-block">Incrementing and prefixes</p>
+          {{ trans('admin/settings/general.Asset Tags') }}
+          <p class="help-block">{{ trans('admin/settings/general.Incrementing and prefixes') }}</p>
         </div>
       </div>
     </div>
@@ -111,8 +111,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.barcodes.index') }}" class="btn btn-lg btn-white"><i class="fa fa-barcode fa-3x"></i></a>
           <br>
-          Barcodes
-          <p class="help-block">Barcode &amp; QR settings</p>
+          {{ trans('admin/settings/general.Barcodes') }}
+          <p class="help-block">{{ trans('admin/settings/general.Barcode & QR settings') }}</p>
         </div>
       </div>
     </div>
@@ -122,8 +122,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.labels.index') }}" class="btn btn-lg btn-white"><i class="fa fa-tags fa-3x"></i></a>
           <br>
-          Labels
-          <p class="help-block">Label sizes &amp; settings</p>
+          {{ trans('admin/settings/general.Labels') }}
+          <p class="help-block">{{ trans('admin/settings/general.Label sizes & settings') }}</p>
         </div>
       </div>
     </div>
@@ -134,8 +134,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.ldap.index') }}" class="btn btn-lg btn-white"><i class="fa fa-sitemap fa-3x"></i></a>
           <br>
-          LDAP
-          <p class="help-block">LDAP/Active Directory</p>
+          {{ trans('admin/settings/general.LDAP') }}
+          <p class="help-block">{{ trans('admin/settings/general.LDAP/Active Directory') }}</p>
         </div>
       </div>
     </div>
@@ -145,8 +145,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.backups.index') }}" class="btn btn-lg btn-white"><i class="fa fa-cloud-download fa-3x"></i></a>
           <br>
-          Backups
-          <p class="help-block">Download files &amp; Data</p>
+          {{ trans('admin/settings/general.Backups') }}
+          <p class="help-block">{{ trans('admin/settings/general.Download files & Data') }}</p>
         </div>
       </div>
     </div>
@@ -157,8 +157,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.oauth.index') }}" class="btn btn-lg btn-white"><i class="fa fa-user-secret fa-3x"></i></a>
           <br>
-          OAuth
-          <p class="help-block">Oauth Endpoint Settings</p>
+          {{ trans('admin/settings/general.OAuth') }}
+          <p class="help-block">{{ trans('admin/settings/general.Oauth Endpoint Settings') }}</p>
         </div>
       </div>
     </div>
@@ -169,8 +169,8 @@
           <div class="box-body text-center">
             <a href="{{ route('settings.phpinfo.index') }}" class="btn btn-lg btn-white"><i class="fa fa-server fa-3x"></i></a>
             <br>
-            PHP
-            <p class="help-block">PHP System Info</p>
+            {{ trans('admin/settings/general.PHP') }}
+            <p class="help-block">{{ trans('admin/settings/general.PHP System Info') }}</p>
           </div>
         </div>
       </div>
@@ -181,8 +181,8 @@
         <div class="box-body text-center">
           <a href="{{ route('settings.purge.index') }}" class="btn btn-lg btn-white text-danger"><i class="fa fa-trash fa-3x"></i></a>
           <br>
-          Purge
-          <p class="help-block">Purge Deleted Records</p>
+          {{ trans('admin/settings/general.Purge') }}
+          <p class="help-block">{{ trans('admin/settings/general.Purge Deleted Records') }}</p>
         </div>
       </div>
     </div>

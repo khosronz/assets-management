@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update General Settings
+    {{ trans('admin/settings/general.Update General Settings') }}
     @parent
 @stop
 
@@ -182,7 +182,7 @@
                            {{ Form::label('default_eula_text', trans('admin/settings/general.default_eula_text')) }}
                        </div>
                        <div class="col-md-9">
-                           {{ Form::textarea('default_eula_text', Input::old('default_eula_text', $setting->default_eula_text), array('class' => 'form-control','placeholder' => 'Add your default EULA text')) }}
+                           {{ Form::textarea('default_eula_text', Input::old('default_eula_text', $setting->default_eula_text), array('class' => 'form-control','placeholder' => 'متن EULA پیش‌فرض خود را اضافه کنید')) }}
                            {!! $errors->first('default_eula_text', '<span class="alert-msg">:message</span>') !!}
                            <p class="help-block">{{ trans('admin/settings/general.default_eula_help_text') }}</p>
                            <p class="help-block">{!! trans('admin/settings/general.eula_markdown') !!}</p>
@@ -212,11 +212,11 @@
                        <!-- Mail test -->
                        <div class="form-group">
                            <div class="col-md-3">
-                               {{ Form::label('login_note', 'Test Mail') }}
+                               {{ Form::label('login_note', 'نامه تست') }}
                            </div>
                            <div class="col-md-9" id="mailtestrow">
                                <a class="btn btn-default btn-sm pull-left" id="mailtest" style="margin-right: 10px;">
-                                   Send Test</a>
+                                   ارسال نامه</a>
                                <span id="mailtesticon"></span>
                                <span id="mailtestresult"></span>
                                <span id="mailteststatus"></span>
@@ -225,7 +225,7 @@
                                <div id="mailteststatus-error" class="text-danger"></div>
                            </div>
                            <div class="col-md-9 col-md-offset-3">
-                               <p class="help-block">This will attempt to send a test mail to {{ config('mail.reply_to.address') }}.</p>
+                               <p class="help-block">این کار تلاش خواهد کرد تا یک نامه آزمایشی برای شما ارسال کند {{ config('mail.reply_to.address') }}.</p>
                            </div>
 
                        </div>

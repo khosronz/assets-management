@@ -105,7 +105,7 @@
     'image'                 => 'تصویر',
     'image_delete'         	=> 'عکس های پاک شده',
     'image_upload'         	=> 'آپلود تصویر',
-    'image_filetypes_help'  => 'Accepted filetypes are jpg, png, gif, and svg. Max upload size allowed is :size.',
+    'image_filetypes_help'  => 'فایل تایپ های پذیرفته شده عبارتند از jpg ، png ، gif و svg. حداکثر اندازه بارگذاری مجاز است :size.',
     'import'         	    => 'واردات',
     'import-history'        => 'واردات تاریخ',
     'asset_maintenance'        => 'نگهداشت دارایی',
@@ -228,4 +228,6 @@
     'login_enabled'         => 'امکان ورود فعال شد',
     'audit_due'             => 'Due for Audit',
     'audit_overdue'         => 'Overdue for Audit',
+
+
     ];
