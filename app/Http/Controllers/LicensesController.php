@@ -170,6 +170,7 @@ class LicensesController extends Controller
         $day= $expiration_date[2];
         $month= $expiration_date[1];
         $year= $expiration_date[0];
+//        dd($day,$month,$year);
         $expiration_date= \Morilog\Jalali\CalendarUtils::toGregorian($year,$month,$day);
         dd($expiration_date);
 
