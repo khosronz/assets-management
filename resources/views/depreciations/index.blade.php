@@ -2,7 +2,8 @@
 
 {{-- Page title --}}
 @section('title')
-Asset Depreciations
+  {{ trans('admin/depreciations/general.asset_depreciations') }}
+
 @parent
 @stop
 

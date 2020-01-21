@@ -228,6 +228,7 @@
     'login_enabled'         => 'امکان ورود فعال شد',
     'audit_due'             => 'Due for Audit',
     'audit_overdue'         => 'Overdue for Audit',
+    'Customize Report'         => 'سفارشی‌سازی گزارش',
 
 
     ];

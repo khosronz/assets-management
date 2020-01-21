@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    'Manage_custom_fields'		        => 'Manage Custom Fields',
     'custom_fields'		        => 'Custom Fields',
     'field'		                => 'Field',
     'about_fieldsets_title'		=> 'About Fieldsets',

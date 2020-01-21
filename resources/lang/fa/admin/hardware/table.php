@@ -8,7 +8,7 @@ return array(
     'change' 		=> '/ خارج',
     'checkout_date' => 'چک کردن تاریخ',
     'checkoutto' 	=> 'قفل شده',
-    'diff' 			=> 'دیف',
+    'diff' 			=> 'ردیف',
     'dl_csv' 		=> 'دانلود CSV',
     'eol' 			=> 'EOL',
     'id'      		=> 'شناسه',

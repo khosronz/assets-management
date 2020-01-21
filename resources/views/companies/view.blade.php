@@ -64,9 +64,6 @@
                             <span class="hidden-xs hidden-sm">{{ trans('general.people') }}</span>
                         </a>
                     </li>
-
-
-
                 </ul>
 
                 <div class="tab-content">
@@ -118,7 +115,6 @@
                               "ignoreColumn": ["actions","image","change","checkbox","checkincheckout","icon"]
                               }'>
                             </table>
-
                         </div>
                     </div><!-- /licenses-tab -->
 

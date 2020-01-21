@@ -44,9 +44,9 @@
     </div>
     <!-- side address column -->
     <div class="col-md-3">
-      <h4>About Companies</h4>
+      <h4>{{ trans('admin/companies/general.about_companies_title') }}</h4>
       <p>
-        You can use companies as a simple informative field, or you can use them to restrict asset visibility and availability to users with a specific company by enabling Full Company Support in your Admin Settings.
+        {{ trans('admin/companies/general.You can use companies as a simple informative field, or you can use them to restrict asset visibility and availability to users with a specific company by enabling Full Company Support in your Admin Settings.') }}
       </p>
   </div>
 

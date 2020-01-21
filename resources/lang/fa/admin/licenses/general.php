@@ -7,8 +7,7 @@ return array(
     'checkout_history'  		=> 'تاریخچه پرداخت',
     'checkout'  				=> 'صندلی مجوز پرداخت',
     'edit'  					=> 'ویرایش مجوز',
-    'filetype_info'				=> 'انواع فایل های مجاز عبارتند از PNG، GIF، JPG، JPEG، DOC، DOCX، PDF، TXT، ZIP و RAR.
-',
+    'filetype_info'				=> 'انواع فایل های مجاز عبارتند از PNG، GIF، JPG، JPEG، DOC، DOCX، PDF، TXT، ZIP و RAR.',
     'clone'  					=> 'مجوز شگرف',
     'history_for'  				=> 'پیشینه برای ',
     'in_out'  					=> 'داخل / خارج',

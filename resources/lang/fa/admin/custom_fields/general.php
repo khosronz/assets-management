@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    'Manage_custom_fields'		        => ' مدیریت فیلدهای سفارشی',
     'custom_fields'		        => 'فیلدهای سفارشی',
     'field'		                => 'فیلد',
     'about_fieldsets_title'		=> 'درباره ی تنظیمات فیلد',
@@ -27,6 +28,12 @@ return array(
     'order'   		            => 'سفارش',
     'create_fieldset'         => 'تنظیمات فیلد جدید',
     'create_field'            => 'فیلد سفارشی جدید',
+    'Help_Text'            => 'متن راهنما',
+    'About_Fieldsets'            => 'درباره مجموعه فیلدها',
+    'Fieldsets work like containers of the custom fields'            => 'مجموعه فیلد ها مانند کانتینرهایی از زمینه‌های سفارشی که شما ایجاد کرده‌اید کار می‌کند . این به شما این امکان را می‌دهد که به طور معمول از ویژگی‌های سفارشی برای انجمن‌های ساده استفاده کنید .',
+    'This is optional text that will appear below the form elements while editing an asset to provide context on the field.'            => 'این متن اختیاری است که در زیر عناصر شکل ظاهر می‌شود در حالی که یک دارایی را ویرایش می‌کند تا زمینه را در این زمینه فراهم کند .',
+    'About_Custom_Fields'            => 'درباره فیلدهای سفارشی',
+    'Custom fields allow you to add arbitrary attributes to assets.'            => 'حوزه‌های سفارشی به شما این امکان را می‌دهد که ویژگی‌های دل‌خواه را به دارایی اضافه کنید .',
     'value_encrypted'      	        => 'ارزش این فیلد در پایگاه داده رمزگذاری شده است. فقط کاربران مدیریت قادر به مشاهده مقدار رمزگشایی خواهند شد',
-    'show_in_email'     => 'Include the value of this field in checkout emails sent to the user? Encrypted fields cannot be included in emails.',
+    'show_in_email'     => 'ارزش این حوزه را در ایمیل ارسالی به کاربر قرار دهید ؟ فیلدهای رمزنگاری شده را نمی‌توان در ایمیل‌ها ذکر کرد.',
 );
