@@ -18,6 +18,6 @@ return array(
     'restore'  					=> 'بازیابی دارایی',
     'pending'  					=> 'در انتظار',
     'undeployable'  			=> 'غیرقابل گسترش',
-    'view'  					=> 'نمایش دارایی ها
-',
+    'view'  					=> 'نمایش دارایی ها',
+    'filetype_info'				=> 'انواع فایل های مجاز عبارتند از PNG، GIF، JPG، JPEG، DOC، DOCX، PDF، TXT، ZIP و RAR.',
 );

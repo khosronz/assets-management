@@ -232,7 +232,7 @@
 }
 
 .fixed-table-toolbar .dropdown-menu {
-    text-align: left;
+    text-align: right;
     max-height: 300px;
     overflow: auto;
 }
@@ -277,8 +277,8 @@
 }
 
 .pull-right .dropdown-menu {
-    right: 0;
-    left: auto;
+    left: 0;
+    right: auto;
 }
 
 /* calculate scrollbar width */

@@ -24,7 +24,7 @@
     <!-- Horizontal Form -->
       <div class="box box-default">
         <div class="box-header with-border">
-          <h3 class="box-title">Customize Report</h3>
+          <h3 class="box-title">{{ trans('general.Customize Report') }}</h3>
         </div><!-- /.box-header -->
 
         <div class="box-body">
@@ -199,7 +199,7 @@
 
             <!-- User fields -->
             <div class="checkbox col-md-12">
-              <h4>Checked Out To Fields:</h4>
+              <h4>{{ trans('admin/reports/general.Checked Out To Fields:') }}</h4>
             </div>
             <div class="checkbox col-md-12">
               <label>
@@ -241,7 +241,7 @@
 
             @if ($customfields->count() > 0)
               <div class="checkbox col-md-12">
-                <h4>Custom Fields:</h4>
+                <h4>{{ trans('admin/reports/general.Custom Fields:') }}</h4>
               </div>
               @foreach ($customfields as $customfield)
                 <div class="checkbox col-md-12">
@@ -257,8 +257,8 @@
 
           <div class="col-md-8">
 
-            <p>Select the fields you'd like to include in your custom report, and click Generate. The file (custom-asset-report-YYYY-mm-dd.csv) will download automatically, and you can open it in Excel.</p>
-            <p>If you'd like to export only certain assets, use the options below to fine-tune your results.</p>
+            <p>{{ trans('admin/reports/general.Select the fields you d like to include in your custom report, and click Generate. The file (custom-asset-report-YYYY-mm-dd.csv) will download automatically, and you can open it in Excel.') }} </p>
+            <p>{{ trans('admin/reports/general.If you d like to export only certain assets, use the options below to fine-tune your results.') }}</p>
 
             @include ('partials.forms.edit.company-select', ['translated_name' => trans('general.company'), 'fieldname' => 'by_company_id', 'hide_new' => 'true'])
             @include ('partials.forms.edit.location-select', ['translated_name' => trans('general.location'), 'fieldname' => 'by_location_id', 'hide_new' => 'true'])
@@ -320,7 +320,7 @@
             <div class="col-md-9 col-md-offset-3">
               <label>
                 {{ Form::checkbox('use_bom', '1') }}
-                Add a BOM (byte-order mark) to this CSV
+                {{ trans('admin/reports/general.Add a BOM (byte-order mark) to this CSV') }}
               </label>
 
             </div>

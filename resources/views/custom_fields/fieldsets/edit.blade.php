@@ -43,8 +43,8 @@
     {{ Form::close() }}
   </div>
   <div class="col-md-3">
-    <h4>About Fieldsets</h4>
-    <p>Fieldsets work like containers of the custom fields you've created. This allows you to group commonly used custom attributes together for easy associations. </p>
+    <h4>{{ trans('admin/custom_fields/general.About_Fieldsets') }}</h4>
+    <p>{{ trans('admin/custom_fields/general.Fieldsets work like containers of the custom fields') }} </p>
   </div>
 </div>
 @stop
