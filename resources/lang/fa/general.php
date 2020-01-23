@@ -60,8 +60,7 @@
     'updated_at' 			=> 'به روز شده در',
     'currency'  			=> '$', // this is deprecated
     'current'  				=> 'کنونی',
-    'custom_report'         => 'گزارش های سفارشی دارایی
-',
+    'custom_report'         => 'گزارش های سفارشی دارایی',
     'dashboard'				=> 'میز کار',
     'days'      			=> 'روزها',
     'days_to_next_audit'    => 'روز به حسابرسی بعدی',
@@ -130,7 +129,7 @@
     'location'              => 'مکان',
     'locations'				=> 'مکانها',
     'logout'				=> 'خروج',
-    'lookup_by_tag'     => 'نگاهی به Asset Tag',
+    'lookup_by_tag'     => 'جستجوی برچسب دارایی',
     'maintenances'          => 'کمک های مالی',
     'manufacturer'			=> 'سازنده',
     'manufacturers'			=> 'تولیدکننده‌ها',
@@ -202,7 +201,7 @@
     'target'                => 'هدف',
     'time_and_date_display' => 'نمایش زمان و تاریخ',
     'total_assets'			=> 'کل دارایی',
-    'total_licenses'		=> 'کل مجوزهای',
+    'total_licenses'		=> 'مجوزهای کلی',
     'total_accessories'		=> 'لوازم جانبی کل',
     'total_consumables'		=> 'کل مواد مصرفی',
     'type'  				=> 'نوع',
@@ -226,9 +225,15 @@
     'noimage'					=> 'هیچ تصویری بارگزاری نشد یا تصویری یافت نشد.',
     'token_expired'             => 'اعتبار فرم شما تمام شده است. لطفا دوباره تلاش کنید.',
     'login_enabled'         => 'امکان ورود فعال شد',
-    'audit_due'             => 'Due for Audit',
-    'audit_overdue'         => 'Overdue for Audit',
+    'audit_due'             => 'به خاطر ممیزی',
+    'audit_overdue'         => 'بازبینی برای حسابرسی',
     'Customize Report'         => 'سفارشی‌سازی گزارش',
+    'View_All'              => 'مشاهده همه',
+    'assets_by_status'         => 'دارایی‌ها با وضعیت',
+    'asset_categories'         => 'دسته‌بندی دارایی',
+    'Loading_please wait'         => 'در حال بارگیری ، لطفا صبر کنید',
+    'Requested_Assets'         => 'دارایی‌های درخواست‌شده',
+    'Manage_API_Keys'         => 'مدیریت کلیدهای API',
 
 
     ];

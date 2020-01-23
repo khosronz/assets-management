@@ -338,7 +338,7 @@
                                     <li {!! (Request::is('account/requested') ? ' class="active"' : '') !!}>
                                         <a href="{{ route('account.requested') }}">
                                             <i class="fa fa-check fa-disk fa-fw"></i>
-                                            Requested Assets
+                                            {{ trans('general.Requested_Assets') }}
                                         </a></li>
 
 
@@ -359,7 +359,7 @@
                                     @can('self.api')
                                         <li>
                                             <a href="{{ route('user.api') }}">
-                                                <i class="fa fa-user-secret fa-fw"></i> Manage API Keys
+                                                <i class="fa fa-user-secret fa-fw"></i>{{ trans('general.Manage_API_Keys') }}
                                             </a>
                                         </li>
                                     @endcan
@@ -402,7 +402,7 @@
                 @can('admin')
                     <li {!! (\Request::route()->getName()=='home' ? ' class="active"' : '') !!}>
                         <a href="{{ route('home') }}">
-                            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+                            <i class="fa fa-dashboard"></i> <span>{{ trans('general.dashboard') }}</span>
                         </a>
                     </li>
                 @endcan
