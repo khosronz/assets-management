@@ -2441,7 +2441,7 @@ pre code {
     }
 
     .col-md-offset-3 {
-        margin-left: 25%
+        margin-right: 25%
     }
 
     .col-md-offset-2 {
@@ -2975,7 +2975,7 @@ input[type=search] {
 
 .checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
     position: absolute;
-    margin-left: -20px
+    margin-right: -20px
 }
 
 .checkbox + .checkbox, .radio + .radio {

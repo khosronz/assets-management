@@ -62,8 +62,8 @@
             <div class="col-sm-9">
               <div class="checkbox">
                 <label for="update_real_loc">
-                  {{ Form::radio('update_real_loc', '1', Input::old('update_real_loc')) }} Update default location AND actual location <br>
-                  {{ Form::radio('update_real_loc', '0', true, Input::old('update_real_loc')) }} Only update default location<br>
+                  {{ Form::radio('update_real_loc', '1', Input::old('update_real_loc')) }} {{ trans('admin/hardware/form.Update_default_location_AND_actual_location') }} <br>
+                  {{ Form::radio('update_real_loc', '0', true, Input::old('update_real_loc')) }} {{ trans('admin/hardware/form.Only_update_default_location') }}<br>
 
                 </label>
               </div>

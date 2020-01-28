@@ -24,4 +24,5 @@ return array(
     'two_factor_admin_optin_help' => 'تنظیمات مدیریت فعلی شما اجازه اجرای مجدد احراز هویت دو عامل را می دهد.',
     'two_factor_enrolled' => 'دستگاه 2FA ثبت شده است',
     'two_factor_active'   => '2FA فعال',
+    'Generate'   => 'تولید شود',
     );

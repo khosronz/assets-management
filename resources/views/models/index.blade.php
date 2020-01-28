@@ -46,8 +46,8 @@
             @if (Input::get('status')!='deleted')
               <div id="toolbar">
                 <select name="bulk_actions" class="form-control select2" style="width: 300px;">
-                  <option value="edit">Bulk Edit</option>
-                  <option value="delete">Bulk Delete</option>
+                  <option value="edit">{{ trans('admin/models/general.Bulk_Edit') }}</option>
+                  <option value="delete">{{ trans('admin/models/general.Bulk_Delete') }}</option>
                 </select>
                 <button class="btn btn-primary" id="bulkEdit" disabled>Go</button>
               </div>

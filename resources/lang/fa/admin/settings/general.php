@@ -45,7 +45,7 @@ return array(
     'footer_text'               => 'متن اضافی پاصفحه',
     'footer_text_help'          => 'این متن در پاصفحه مناسب ظاهر خواهد شد . اجازه استفاده از پیوندها <a href="https://help.github.com/articles/github-flavored-markdown/">Github طعم دار</a>. شکستن خط ، هدر ها ، تصاویر و غیره ممکن است منجر به نتایج غیرقابل‌پیش‌بینی شود.',
     'general_settings'			=> 'تنظیمات عمومی',
-	'generate_backup'			=> 'تولید پشتیباBrandingن گیری',
+	'generate_backup'			=> 'تولید پشتیبان گیری',
     'header_color'              => 'رنگ هدر',
     'info'                      => 'این تنظیمات به شما اجازه سفارشی کردن جنبه های خاصی از نصب و راه اندازی خود را می دهد.',
     'laravel'                   => 'نسخه لاراول',

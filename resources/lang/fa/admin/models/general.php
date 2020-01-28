@@ -13,7 +13,13 @@ return array(
     'view_deleted'              => 'دیدن پاک شده ها',
     'view_models'               => 'دیدن مدل ها',
     'fieldset'                  => 'تنظیمات فیلد',
-    'no_custom_field'           => 'بدون زمینه های سفارشی
-',
+    'no_custom_field'           => 'بدون زمینه های سفارشی',
     'add_default_values'        => 'Add default values',
+    'Bulk_Edit'        => 'ویرایش عمده',
+    'Bulk_Delete'        => 'حذف عمده',
+    'Edit'        => 'ویرایش',
+    'Delete'        => 'حذف',
+    'Generate_Labels'        => 'تولید برچسب',
+    'Go'        => 'برو',
+    'More_Info'        => 'اطلاعات بیشتر',
 );

@@ -76,8 +76,8 @@
         <!-- Custom Tabs -->
       <div class="nav-tabs-custom">
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#tab_1" data-toggle="tab">Information</a></li>
-          <li><a href="#tab_2" data-toggle="tab">Permissions</a></li>
+          <li class="active"><a href="#tab_1" data-toggle="tab">{{ trans('admin/users/table.Information') }}</a></li>
+          <li><a href="#tab_2" data-toggle="tab">{{ trans('admin/users/table.Permissions') }}</a></li>
         </ul>
 
         <div class="tab-content">
@@ -156,7 +156,7 @@
                   </div>
                   <div class="col-md-4">
                     @if ($user->ldap_import!='1')
-                      <a href="#" class="left" id="genPassword">Generate</a>
+                      <a href="#" class="left" id="genPassword">{{ trans('admin/users/general.Generate') }}</a>
                     @endif
                   </div>
                 </div>
