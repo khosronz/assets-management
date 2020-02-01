@@ -33,7 +33,7 @@
                                 <!-- The fileinput-button span is used to style the file input field as button -->
                                 @if (!config('app.lock_passwords'))
                                 <span class="btn btn-info fileinput-button">
-                                    <span>Select Import File...</span>
+                                    <span>{{ trans('button.Select_Import_File') }}</span>
                                     <!-- The file input field used as target for the file upload widget -->
                                     <input id="fileupload" type="file" name="files[]" data-url="{{ route('api.imports.index') }}" accept="text/csv">
                                 </span>
@@ -54,9 +54,9 @@
                             <div class="col-md-12" style="padding-top: 30px;">
                                 <table class="table table-striped" id="upload-table">
                                     <thead>
-                                        <th>File</th>
-                                        <th>Created</th>
-                                        <th>Size</th>
+                                        <th>{{ trans('table.File') }}</th>
+                                        <th>{{ trans('table.Created') }}</th>
+                                        <th>{{ trans('table.Size') }}</th>
                                         <th></th>
                                     </thead>
                                     <tbody>

@@ -27,7 +27,7 @@
       <a class="btn btn-default pull-right" href="{{ route('users.index', ['status' => 'deleted']) }}" style="margin-right: 5px;">{{ trans('admin/users/table.show_deleted') }}</a>
     @endif
     @can('view', \App\Models\User::class)
-        <a class="btn btn-default pull-right" href="{{ route('users.export') }}" style="margin-right: 5px;">Export</a>
+        <a class="btn btn-default pull-right" href="{{ route('users.export') }}" style="margin-right: 5px;">{{ trans('admin/users/general.Export') }}</a>
     @endcan
 @stop
 
@@ -48,10 +48,10 @@
               @can('delete', \App\Models\User::class)
                 <div id="toolbar">
                   <select name="bulk_actions" class="form-control select2" style="width: 200px;">
-                    <option value="delete">Bulk Checkin &amp; Delete</option>
-                    <option value="edit">Bulk Edit</option>
+                    <option value="delete">{{ trans('admin/users/general.Bulk_Checkin_&_Delete') }}</option>
+                    <option value="edit">{{ trans('admin/users/general.Bulk_Edit') }}</option>
                   </select>
-                  <button class="btn btn-default" id="bulkEdit" disabled>Go</button>
+                  <button class="btn btn-default" id="bulkEdit" disabled>{{ trans('button.Go') }}</button>
                 </div>
               @endcan
             @endif

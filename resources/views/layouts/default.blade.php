@@ -274,8 +274,8 @@
                                     @endif
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li class="header">You have {{ count($alert_items) }} items below or almost below
-                                        minimum quantity levels
+                                    <li class="header">{{ trans('general.You_have') }} {{ count($alert_items) }} {{ trans('general.items below or almost below minimum quantity levels') }}
+
                                     </li>
                                     <li>
                                         <!-- inner menu: contains the actual data -->

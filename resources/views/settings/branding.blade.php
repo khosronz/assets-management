@@ -50,10 +50,10 @@
                             </div>
                             <div class="col-md-7">
                                 @if (config('app.lock_passwords')===true)
-                                    {{ Form::text('site_name', Input::old('site_name', $setting->site_name), array('class' => 'form-control', 'disabled'=>'disabled','placeholder' => 'Snipe-IT Asset Management')) }}
+                                    {{ Form::text('site_name', Input::old('site_name', $setting->site_name), array('class' => 'form-control', 'disabled'=>'disabled','placeholder' => 'Asset Management')) }}
                                 @else
                                     {{ Form::text('site_name',
-                                        Input::old('site_name', $setting->site_name), array('class' => 'form-control','placeholder' => 'Snipe-IT Asset Management')) }}
+                                        Input::old('site_name', $setting->site_name), array('class' => 'form-control','placeholder' => 'Asset Management')) }}
                                 @endif
                                 {!! $errors->first('site_name', '<span class="alert-msg">:message</span>') !!}
                             </div>
@@ -77,7 +77,7 @@
                                     <p class="help-block" id="upload-file-status">{{ trans('general.image_filetypes_help', ['size' => \App\Helpers\Helper::file_upload_max_size_readable()]) }}</p>
                                 
                                 {!! $errors->first('image', '<span class="alert-msg">:message</span>') !!}
-                                {{ Form::checkbox('clear_logo', '1', Input::old('clear_logo'),array('class' => 'minimal')) }} Remove
+                                {{ Form::checkbox('clear_logo', '1', Input::old('clear_logo'),array('class' => 'minimal')) }} {{ trans('admin/settings/general.Remove') }}
                                @endif
                             </div>
                         </div>
@@ -89,7 +89,7 @@
                                 {{ Form::label('brand', trans('admin/settings/general.brand')) }}
                             </div>
                             <div class="col-md-9">
-                                {!! Form::select('brand', array('1'=>'Text','2'=>'Logo','3'=>'Logo + Text'), Input::old('brand', $setting->brand), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
+                                {!! Form::select('brand', array('1'=>'متن','2'=>'لوگو','3'=>'لوگو + متن'), Input::old('brand', $setting->brand), array('class' => 'form-control select2', 'style'=>'width: 150px ;')) !!}
                                 {!! $errors->first('brand', '<span class="alert-msg">:message</span>') !!}
                             </div>
                         </div>

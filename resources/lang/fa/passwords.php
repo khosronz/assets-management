@@ -3,8 +3,11 @@
 return [
     'sent'	        => 'لینک رمز عبور شما ارسال شده است!',
     'user'			=> 'هیچ کاربر فعالی با این آدرس ایمیل یافت نشد.',
-    'token'         => 'The password reset token you have provided is invalid',
-    'password'      => 'Passwords must be at least six characters and match the confirmation.',
-    'reset'         => 'Your password has been reset'
+    'token'         => 'تنظیم رمز عبور گذرواژه که ارائه کرده‌اید نامعتبر است',
+    'password'      => 'گذرواژه‌ها باید حداقل شش کاراکتر داشته باشند و آن‌ها مطابقت داشته .',
+    'reset'         => 'گذرواژه شما دوباره تنظیم شده‌است',
+    'Current_Password'         => 'گذرواژه فعلی',
+    'New_Password'         => 'گذرواژه جدید',
+    'New_Password_repeat'         => 'تکرار گذر واژه جدید',
 ];
 

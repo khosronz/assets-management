@@ -25,4 +25,7 @@ return array(
     'two_factor_enrolled' => 'دستگاه 2FA ثبت شده است',
     'two_factor_active'   => '2FA فعال',
     'Generate'   => 'تولید شود',
+    'Export'   => 'صدور',
+    'Bulk_Edit'        => 'ویرایش عمده',
+    'Bulk_Checkin_&_Delete'        => 'بررسی و حذف عمده',
     );

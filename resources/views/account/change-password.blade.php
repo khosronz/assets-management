@@ -20,7 +20,7 @@
 
     <!-- Old Password -->
     <div class="form-group {{ $errors->has('current_password') ? ' has-error' : '' }}">
-        <label for="current_password" class="col-md-3 control-label">Current Password
+        <label for="current_password" class="col-md-3 control-label">{{ trans('passwords.Current_Password') }}
         </label>
         <div class="col-md-5 required">
             <input class="form-control" type="password" name="current_password" id="current_password" {{ (config('app.lock_passwords') ? ' disabled' : '') }}>
@@ -29,7 +29,7 @@
     </div>
 
     <div class="form-group {{ $errors->has('password') ? ' has-error' : '' }}">
-        <label for="password" class="col-md-3 control-label">New Password</label>
+        <label for="password" class="col-md-3 control-label">{{ trans('passwords.New_Password') }}</label>
         <div class="col-md-5 required">
             <input class="form-control" type="password" name="password" id="password" {{ (config('app.lock_passwords') ? ' disabled' : '') }}>
             {!! $errors->first('password', '<span class="alert-msg"><i class="fa fa-times"></i> :message</span>') !!}
@@ -38,7 +38,7 @@
 
 
     <div class="form-group {{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-        <label for="password_confirm" class="col-md-3 control-label">New Password</label>
+        <label for="password_confirm" class="col-md-3 control-label">{{ trans('passwords.New_Password_repeat') }}</label>
         <div class="col-md-5 required">
             <input class="form-control" type="password" name="password_confirmation" id="password_confirmation"  {{ (config('app.lock_passwords') ? ' disabled' : '') }}>
             {!! $errors->first('password_confirmation', '<span class="alert-msg"><i class="fa fa-times"></i> :message</span>') !!}

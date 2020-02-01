@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Import History
+    {{ trans('general.import-history') }}
     @parent
 @stop
 
@@ -61,13 +61,13 @@
                         @endif
 
                         <p>
-                           Upload a CSV that contains asset history. The assets and users MUST already exist in the system, or they will be skipped. Matching assets for history import happens against the asset tag. We will try to find a matching user based on the user's name you provide, and the criteria you select below. If you do not select any criteria below, it will simply try to match on the username format you configured in the Admin &gt; General Settings.
+                            {{ trans('admin/hardware/general.Upload_a_CSV_that_contains_asset_history.') }}
                         </p>
 
-                        <p>Fields included in the CSV must match the headers: <strong>Asset Tag, Checkout Date, Checkin Date, Name</strong>. Any additional fields will be ignored. </p>
+                        <p>{{ trans('admin/hardware/general.Fields_included_in_the_CSV_must_match_the_headers') }} <strong>Asset Tag, Checkout Date, Checkin Date, Name</strong>.{{ trans('admin/hardware/general.Any_additional_fields_will_be_ignored') }} </p>
 
 
-                        <p><strong>History should be ordered by date in ascending order.</strong></p>
+                        <p><strong>{{ trans('admin/hardware/general.History_should_be_ordered_by_date_in_ascending_order.') }}</strong></p>
 
                         <div class="form-group">
                             <label for="first_name" class="col-sm-3 control-label">{{ trans('admin/users/general.usercsv') }}</label>
@@ -84,7 +84,7 @@
                     <div class="col-sm-2">
                     </div>
                     <div class="col-sm-10">
-                        {{ Form::checkbox('match_firstnamelastname', '1', Input::old('match_firstnamelastname')) }} Try to match users by firstname.lastname (jane.smith) format
+                        {{ Form::checkbox('match_firstnamelastname', '1', Input::old('match_firstnamelastname')) }} {{ trans('admin/hardware/general.Try_to_match_users_by_firstname.lastname_(ghader.ansari)_format') }}
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@
                     <div class="col-sm-2">
                     </div>
                     <div class="col-sm-10">
-                        {{ Form::checkbox('match_flastname', '1', Input::old('match_flastname')) }} Try to match users by first initial last name (jsmith) format
+                        {{ Form::checkbox('match_flastname', '1', Input::old('match_flastname')) }} {{ trans('admin/hardware/general.Try_to_match_users_by_first_initial_last_name_(ansari)_format') }}
                     </div>
                 </div>
 
@@ -102,7 +102,7 @@
                     <div class="col-sm-2">
                     </div>
                     <div class="col-sm-10">
-                        {{ Form::checkbox('match_firstname', '1', Input::old('match_firstname')) }} Try to match users by first name (jane) format
+                        {{ Form::checkbox('match_firstname', '1', Input::old('match_firstname')) }} {{ trans('admin/hardware/general.Try_to_match_users_by_first_name_(ghader)_format') }}
                     </div>
                 </div>
 
@@ -111,7 +111,7 @@
                     <div class="col-sm-2">
                     </div>
                     <div class="col-sm-10">
-                        {{ Form::checkbox('match_email', '1', Input::old('match_email')) }} Try to match users by email as username
+                        {{ Form::checkbox('match_email', '1', Input::old('match_email')) }} {{ trans('admin/hardware/general.Try_to_match_users_by_email_as_username') }}
                     </div>
                 </div>
 

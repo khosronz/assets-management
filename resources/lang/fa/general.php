@@ -95,7 +95,7 @@
     'file_name'				=> 'فایل',
     'file_uploads'			=> 'بارگذاری پرونده',
     'generate'				=> 'تولید',
-     'github_markdown'      => 'This field accepts <a href="https://help.github.com/articles/github-flavored-markdown/">Github flavored markdown</a>.',
+     'github_markdown'      => 'در این زمینه می پذیرد<a href="https://help.github.com/articles/github-flavored-markdown/">Github طعم دار</a>.',
     'groups'				=> 'گروه ها',
     'gravatar_email'        => 'آدرس آواتار ایمیل ',
     'history'  			    => 'پيشينه',
@@ -234,6 +234,12 @@
     'Loading_please wait'         => 'در حال بارگیری ، لطفا صبر کنید',
     'Requested_Assets'         => 'دارایی‌های درخواست‌شده',
     'Manage_API_Keys'         => 'مدیریت کلیدهای API',
-
+    'To'         => 'برای',
+    'Changed'         => 'تغییر کرده',
+    'Edit'  			=> 'ویرایش',
+    'Delete'  			=> 'حذف',
+    'You_have'  			=> 'شما باید',
+    'items below or almost below minimum quantity levels'  			=> 'مورد زیر یا تقریباً کمتر از حداقل مقدار آن دارید',
+    'Generate_Labels'  			=> 'برچسب‌ها را تولید کنید',
 
     ];

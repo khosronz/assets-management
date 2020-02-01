@@ -17,7 +17,7 @@
         <h3 class="box-title">{{ trans('admin/custom_fields/general.fieldsets') }}</h3>
         <div class="box-tools pull-right">
           @can('create', \App\Models\CustomFieldset::class)
-          <a href="{{ route('fieldsets.create') }}" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Create a new fieldset">{{ trans('admin/custom_fields/general.create_fieldset') }}</a>
+          <a href="{{ route('fieldsets.create') }}" class="btn btn-sm btn-primary" data-toggle="tooltip" title="{{ trans('admin/custom_fields/general.create_fieldset') }}">{{ trans('admin/custom_fields/general.create_fieldset') }}</a>
           @endcan
         </div>
       </div><!-- /.box-header -->
@@ -99,7 +99,7 @@
         <h3 class="box-title">{{ trans('admin/custom_fields/general.custom_fields') }}</h3>
         <div class="box-tools pull-right">
           @can('create', \App\Models\CustomField::class)
-          <a href="{{ route('fields.create') }}" class="btn btn-sm btn-primary" data-toggle="tooltip" title="Create a new custom field">{{ trans('admin/custom_fields/general.create_field') }}</a>
+          <a href="{{ route('fields.create') }}" class="btn btn-sm btn-primary" data-toggle="tooltip" title="{{ trans('admin/custom_fields/general.create_field') }}">{{ trans('admin/custom_fields/general.create_field') }}</a>
           @endcan
         </div>
 
@@ -126,9 +126,9 @@
           <thead>
             <tr>
               <th data-searchable="true">{{ trans('general.name') }}</th>
-              <th data-searchable="true">Help Text</th>
-              <th data-searchable="true">Email</th>
-              <th data-visible="false">DB Field</th>
+              <th data-searchable="true">{{ trans('admin/custom_fields/general.Help_Text') }}</th>
+              <th data-searchable="true">{{ trans('admin/custom_fields/general.Email') }}</th>
+              <th data-visible="false">{{ trans('admin/custom_fields/general.DB_Field') }}</th>
               <th data-searchable="true">{{ trans('admin/custom_fields/general.field_format') }}</th>
               <th data-searchable="true">{{ trans('admin/custom_fields/general.field_element_short') }}</th>
               <th data-searchable="true">{{ trans('admin/custom_fields/general.fieldsets') }}</th>

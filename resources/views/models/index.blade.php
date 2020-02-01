@@ -49,7 +49,7 @@
                   <option value="edit">{{ trans('admin/models/general.Bulk_Edit') }}</option>
                   <option value="delete">{{ trans('admin/models/general.Bulk_Delete') }}</option>
                 </select>
-                <button class="btn btn-primary" id="bulkEdit" disabled>Go</button>
+                <button class="btn btn-primary" id="bulkEdit" disabled>{{ trans('button.Go') }}</button>
               </div>
             @endif
               <div class="table-responsive">

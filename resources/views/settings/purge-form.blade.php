@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Purge Deleted
+    {{ trans('admin/settings/general.Purge_Deleted') }}
     @parent
 @stop
 
