@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use App\Http\Requests\AssetFileRequest;
@@ -33,13 +34,13 @@ class LicensesController extends Controller
 {
 
     /**
-    * Returns a view that invokes the ajax tables which actually contains
-    * the content for the licenses listing, which is generated in getDatatable.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @see LicensesController::getDatatable() method that generates the JSON response
-    * @since [v1.0]
-    * @return \Illuminate\Contracts\View\View
+     * Returns a view that invokes the ajax tables which actually contains
+     * the content for the licenses listing, which is generated in getDatatable.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @see LicensesController::getDatatable() method that generates the JSON response
+     * @since [v1.0]
+     * @return \Illuminate\Contracts\View\View
      */
     public function index()
     {
@@ -49,12 +50,12 @@ class LicensesController extends Controller
 
 
     /**
-    * Returns a form view that allows an admin to create a new licence.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @see AccessoriesController::getDatatable() method that generates the JSON response
-    * @since [v1.0]
-    * @return \Illuminate\Contracts\View\View
+     * Returns a form view that allows an admin to create a new licence.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @see AccessoriesController::getDatatable() method that generates the JSON response
+     * @since [v1.0]
+     * @return \Illuminate\Contracts\View\View
      */
     public function create()
     {
@@ -90,27 +91,27 @@ class LicensesController extends Controller
         // create a new model instance
         $license = new License();
         // Save the license data
-        $license->company_id        = Company::getIdForCurrentUser($request->input('company_id'));
-        $license->depreciation_id   = $request->input('depreciation_id');
-        $license->expiration_date   = $request->input('expiration_date');
-        $license->license_email     = $request->input('license_email');
-        $license->license_name      = $request->input('license_name');
-        $license->maintained        = $request->input('maintained', 0);
-        $license->manufacturer_id   = $request->input('manufacturer_id');
-        $license->name              = $request->input('name');
-        $license->notes             = $request->input('notes');
-        $license->order_number      = $request->input('order_number');
-        $license->purchase_cost     = $request->input('purchase_cost');
-        $license->purchase_date     = $request->input('purchase_date');
-        $license->purchase_order    = $request->input('purchase_order');
-        $license->purchase_order    = $request->input('purchase_order');
-        $license->reassignable      = $request->input('reassignable', 0);
-        $license->seats             = $request->input('seats');
-        $license->serial            = $request->input('serial');
-        $license->supplier_id       = $request->input('supplier_id');
-        $license->category_id       = $request->input('category_id');
-        $license->termination_date  = $request->input('termination_date');
-        $license->user_id           = Auth::id();
+        $license->company_id = Company::getIdForCurrentUser($request->input('company_id'));
+        $license->depreciation_id = $request->input('depreciation_id');
+        $license->expiration_date = $request->input('expiration_date');
+        $license->license_email = $request->input('license_email');
+        $license->license_name = $request->input('license_name');
+        $license->maintained = $request->input('maintained', 0);
+        $license->manufacturer_id = $request->input('manufacturer_id');
+        $license->name = $request->input('name');
+        $license->notes = $request->input('notes');
+        $license->order_number = $request->input('order_number');
+        $license->purchase_cost = $request->input('purchase_cost');
+        $license->purchase_date = $request->input('purchase_date');
+        $license->purchase_order = $request->input('purchase_order');
+        $license->purchase_order = $request->input('purchase_order');
+        $license->reassignable = $request->input('reassignable', 0);
+        $license->seats = $request->input('seats');
+        $license->serial = $request->input('serial');
+        $license->supplier_id = $request->input('supplier_id');
+        $license->category_id = $request->input('category_id');
+        $license->termination_date = $request->input('termination_date');
+        $license->user_id = Auth::id();
 
         if ($license->save()) {
             return redirect()->route("licenses.index")->with('success', trans('admin/licenses/message.create.success'));
@@ -119,13 +120,13 @@ class LicensesController extends Controller
     }
 
     /**
-    * Returns a form with existing license data to allow an admin to
-    * update license information.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $licenseId
-    * @return \Illuminate\Contracts\View\View
+     * Returns a form with existing license data to allow an admin to
+     * update license information.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $licenseId
+     * @return \Illuminate\Contracts\View\View
      */
     public function edit($licenseId = null)
     {
@@ -165,38 +166,33 @@ class LicensesController extends Controller
         }
 
 
-        $expiration_date=$request->input('expiration_date');
-        $expiration_date = explode ("-", $expiration_date);
-        $day= $expiration_date[2];
-        $month= $expiration_date[1];
-        $year= $expiration_date[0];
-//        dd($day,$month,$year);
-        $expiration_date= \Morilog\Jalali\CalendarUtils::toGregorian($year,$month,$day);
-        dd($expiration_date);
+        $expiration_date = $this->persianToGregorianDate($request->input('expiration_date'));
+        $termination_date = $this->persianToGregorianDate($request->input('termination_date'));
+        $purchase_date = $this->persianToGregorianDate($request->input('purchase_date'));
 
         $this->authorize('update', $license);
 
-        $license->company_id        = Company::getIdForCurrentUser($request->input('company_id'));
-        $license->depreciation_id   = $request->input('depreciation_id');
-        $license->expiration_date   = $request->input('expiration_date');
-        $license->license_email     = $request->input('license_email');
-        $license->license_name      = $request->input('license_name');
-        $license->maintained        = $request->input('maintained',0);
-        $license->name              = $request->input('name');
-        $license->notes             = $request->input('notes');
-        $license->order_number      = $request->input('order_number');
-        $license->purchase_cost     = $request->input('purchase_cost');
-        $license->purchase_date     = $request->input('purchase_date');
-        $license->purchase_order    = $request->input('purchase_order');
-        $license->reassignable      = $request->input('reassignable', 0);
+        $license->company_id = Company::getIdForCurrentUser($request->input('company_id'));
+        $license->depreciation_id = $request->input('depreciation_id');
+        $license->expiration_date = $expiration_date;
+        $license->license_email = $request->input('license_email');
+        $license->license_name = $request->input('license_name');
+        $license->maintained = $request->input('maintained', 0);
+        $license->name = $request->input('name');
+        $license->notes = $request->input('notes');
+        $license->order_number = $request->input('order_number');
+        $license->purchase_cost = $request->input('purchase_cost');
+        $license->purchase_date = $purchase_date;
+        $license->purchase_order = $request->input('purchase_order');
+        $license->reassignable = $request->input('reassignable', 0);
         if (Gate::allows('viewKeys', $license)) {
-            $license->serial        = $request->input('serial');
+            $license->serial = $request->input('serial');
         }
-        $license->termination_date  = $request->input('termination_date');
-        $license->seats             = e($request->input('seats'));
-        $license->manufacturer_id   =  $request->input('manufacturer_id');
-        $license->supplier_id       = $request->input('supplier_id');
-        $license->category_id       = $request->input('category_id');
+        $license->termination_date = $termination_date;
+        $license->seats = e($request->input('seats'));
+        $license->manufacturer_id = $request->input('manufacturer_id');
+        $license->supplier_id = $request->input('supplier_id');
+        $license->category_id = $request->input('category_id');
 
         if ($license->save()) {
             return redirect()->route('licenses.show', ['license' => $licenseId])->with('success', trans('admin/licenses/message.update.success'));
@@ -205,14 +201,25 @@ class LicensesController extends Controller
         return redirect()->back()->withInput()->withErrors($license->getErrors());
     }
 
+    public function persianToGregorianDate($date)
+    {
+        $date = explode("-", $date);
+        $day = $date[2];
+        $month = $date[1];
+        $year = $date[0];
+        $date = \Morilog\Jalali\CalendarUtils::toGregorian($year, $month, $day);
+        $date = $date[0] . '-' . $date[1] . '-' . $date[2];
+        return $date;
+    }
+
     /**
-    * Checks to see whether the selected license can be deleted, and
-    * if it can, marks it as deleted.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $licenseId
-    * @return \Illuminate\Http\RedirectResponse
+     * Checks to see whether the selected license can be deleted, and
+     * if it can, marks it as deleted.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $licenseId
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function destroy($licenseId)
     {
@@ -228,7 +235,7 @@ class LicensesController extends Controller
             // Delete the license and the associated license seats
             DB::table('license_seats')
                 ->where('id', $license->id)
-                ->update(array('assigned_to' => null,'asset_id' => null));
+                ->update(array('assigned_to' => null, 'asset_id' => null));
 
             $licenseSeats = $license->licenseseats();
             $licenseSeats->delete();
@@ -244,20 +251,20 @@ class LicensesController extends Controller
     }
 
     /**
-    * Provides the form view for checking out a license to a user.
-    * Here we pass the license seat ID instead of the license ID,
-    * because licenses themselves are never checked out to anyone,
-    * only the seats associated with them.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $seatId
-    * @return \Illuminate\Contracts\View\View
+     * Provides the form view for checking out a license to a user.
+     * Here we pass the license seat ID instead of the license ID,
+     * because licenses themselves are never checked out to anyone,
+     * only the seats associated with them.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $seatId
+     * @return \Illuminate\Contracts\View\View
      */
     public function getCheckout($licenceId)
     {
         // Check that the license is valid
-        if ($license = License::where('id',$licenceId)->first()) {
+        if ($license = License::where('id', $licenceId)->first()) {
 
             // If the license is valid, check that there is an available seat
             if ($license->getAvailSeatsCountAttribute() < 1) {
@@ -286,7 +293,7 @@ class LicensesController extends Controller
 
         // Check that the license is valid
         if ($license = License::where('id', $licenseId)->first()) {
-            
+
             // If the license is valid, check that there is an available seat
             if ($license->getAvailSeatsCountAttribute() < 1) {
                 return redirect()->route('licenses.index')->with('error', 'There are no available seats for this license');
@@ -306,18 +313,14 @@ class LicensesController extends Controller
                     return redirect()->route('licenses.index')->with('error', 'License seat is not available for checkout');
                 }
             }
-    
 
-            
-
-            
 
             $this->authorize('checkout', $license);
 
             // Declare the rules for the form validation
             $rules = [
-                'note'   => 'string|nullable',
-                'asset_id'  => 'required_without:assigned_to',
+                'note' => 'string|nullable',
+                'asset_id' => 'required_without:assigned_to',
             ];
 
             // Create a new validator instance from our validation rules
@@ -332,7 +335,7 @@ class LicensesController extends Controller
 
 
             // This item is checked out to a an asset
-            if (request('checkout_to_type')=='asset') {
+            if (request('checkout_to_type') == 'asset') {
                 if (is_null($target = Asset::find(request('asset_id')))) {
                     return redirect()->route('licenses.index')->with('error', trans('admin/licenses/message.asset_does_not_exist'));
                 }
@@ -340,7 +343,7 @@ class LicensesController extends Controller
 
                 // Override asset's assigned user if available
                 if ($target->checkedOutToUser()) {
-                    $licenseSeat->assigned_to =  $target->assigned_to;
+                    $licenseSeat->assigned_to = $target->assigned_to;
                 }
 
             } else {
@@ -364,20 +367,18 @@ class LicensesController extends Controller
         return redirect()->route('licenses.index')->with('error', trans('admin/licenses/message.not_found'));
 
 
-
-
         return redirect()->route("licenses.index")->with('error', trans('admin/licenses/message.checkout.error'));
     }
 
 
     /**
-    * Makes the form view to check a license seat back into inventory.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $seatId
-    * @param string $backTo
-    * @return \Illuminate\Contracts\View\View
+     * Makes the form view to check a license seat back into inventory.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $seatId
+     * @param string $backTo
+     * @return \Illuminate\Contracts\View\View
      */
     public function getCheckin($seatId = null, $backTo = null)
     {
@@ -399,14 +400,14 @@ class LicensesController extends Controller
 
 
     /**
-    * Validates and stores the license checkin action.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @see LicensesController::getCheckin() method that provides the form view
-    * @since [v1.0]
-    * @param int $seatId
-    * @param string $backTo
-    * @return \Illuminate\Http\RedirectResponse
+     * Validates and stores the license checkin action.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @see LicensesController::getCheckin() method that provides the form view
+     * @since [v1.0]
+     * @param int $seatId
+     * @param string $backTo
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function postCheckin($seatId = null, $backTo = null)
     {
@@ -432,13 +433,13 @@ class LicensesController extends Controller
         }
 
         // Update the asset data
-        $licenseSeat->assigned_to                   = null;
-        $licenseSeat->asset_id                      = null;
+        $licenseSeat->assigned_to = null;
+        $licenseSeat->asset_id = null;
 
         // Was the asset updated?
         if ($licenseSeat->save()) {
             $licenseSeat->logCheckin($license, e(request('note')));
-            if ($backTo=='user') {
+            if ($backTo == 'user') {
                 return redirect()->route("users.show", $return_to->id)->with('success', trans('admin/licenses/message.checkin.success'));
             }
             return redirect()->route("licenses.show", $licenseSeat->license_id)->with('success', trans('admin/licenses/message.checkin.success'));
@@ -449,12 +450,12 @@ class LicensesController extends Controller
     }
 
     /**
-    * Makes the license detail page.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $licenseId
-    * @return \Illuminate\Contracts\View\View
+     * Makes the license detail page.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $licenseId
+     * @return \Illuminate\Contracts\View\View
      */
     public function show($licenseId = null)
     {
@@ -467,7 +468,7 @@ class LicensesController extends Controller
         }
         return redirect()->route('licenses.index')->with('error', trans('admin/licenses/message.does_not_exist', compact('id')));
     }
-    
+
 
     public function getClone($licenseId = null)
     {
@@ -489,26 +490,26 @@ class LicensesController extends Controller
 
         // Show the page
         return view('licenses/edit')
-        ->with('depreciation_list', Helper::depreciationList())
-        ->with('item', $license)
-        ->with('maintained_list', $maintained_list);
+            ->with('depreciation_list', Helper::depreciationList())
+            ->with('item', $license)
+            ->with('maintained_list', $maintained_list);
     }
 
 
     /**
-    * Validates and stores files associated with a license.
-    *
-    * @todo Switch to using the AssetFileRequest form request validator.
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $licenseId
-    * @return \Illuminate\Http\RedirectResponse
+     * Validates and stores files associated with a license.
+     *
+     * @todo Switch to using the AssetFileRequest form request validator.
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $licenseId
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function postUpload(AssetFileRequest $request, $licenseId = null)
     {
         $license = License::find($licenseId);
         // the license is valid
-        $destinationPath = config('app.private_uploads').'/licenses';
+        $destinationPath = config('app.private_uploads') . '/licenses';
 
         if (isset($license->id)) {
             $this->authorize('update', $license);
@@ -517,7 +518,7 @@ class LicensesController extends Controller
 
                 foreach (Input::file('file') as $file) {
                     $extension = $file->getClientOriginalExtension();
-                    $filename = 'license-'.$license->id.'-'.str_random(8).'-'.str_slug(basename($file->getClientOriginalName(), '.'.$extension)).'.'.$extension;
+                    $filename = 'license-' . $license->id . '-' . str_random(8) . '-' . str_slug(basename($file->getClientOriginalName(), '.' . $extension)) . '.' . $extension;
                     $upload_success = $file->move($destinationPath, $filename);
 
                     //Log the upload to the log
@@ -541,27 +542,27 @@ class LicensesController extends Controller
 
 
     /**
-    * Deletes the selected license file.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $licenseId
-    * @param int $fileId
-    * @return \Illuminate\Http\RedirectResponse
+     * Deletes the selected license file.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $licenseId
+     * @param int $fileId
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function getDeleteFile($licenseId = null, $fileId = null)
     {
         $license = License::find($licenseId);
-        $destinationPath = config('app.private_uploads').'/licenses';
+        $destinationPath = config('app.private_uploads') . '/licenses';
 
         // the license is valid
         if ($license) {
             $this->authorize('edit', $license);
             $log = Actionlog::find($fileId);
             if ($log) {
-                $full_filename = $destinationPath.'/'.$log->filename;
+                $full_filename = $destinationPath . '/' . $log->filename;
                 if (file_exists($full_filename)) {
-                    unlink($destinationPath.'/'.$log->filename);
+                    unlink($destinationPath . '/' . $log->filename);
                 }
                 $log->delete();
                 return redirect()->back()->with('success', trans('admin/licenses/message.deletefile.success'));
@@ -576,15 +577,14 @@ class LicensesController extends Controller
     }
 
 
-
     /**
-    * Allows the selected file to be viewed.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.4]
-    * @param int $licenseId
-    * @param int $fileId
-    * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
+     * Allows the selected file to be viewed.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.4]
+     * @param int $licenseId
+     * @param int $fileId
+     * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
     public function displayFile($licenseId = null, $fileId = null, $download = true)
     {
@@ -599,7 +599,7 @@ class LicensesController extends Controller
             if ($log) {
 
                 $file = $log->get_src('licenses');
-                if ($file =='') {
+                if ($file == '') {
                     return response('File not found on server', 404)
                         ->header('Content-Type', 'text/plain');
                 }
@@ -607,7 +607,7 @@ class LicensesController extends Controller
                 $mimetype = \File::mimeType($file);
 
                 if (!file_exists($file)) {
-                    return response('File '.$file.' not found on server', 404)
+                    return response('File ' . $file . ' not found on server', 404)
                         ->header('Content-Type', 'text/plain');
                 }
 
@@ -627,19 +627,18 @@ class LicensesController extends Controller
     }
 
 
-
     /**
-    * Generates the next free seat ID for checkout.
-    *
-    * @todo This is a dumb way to solve this problem.
-    * Author should refactor. And go hide in a hole and
-    * think about what she's done. And perhaps find a new
-    * line of work. And get in the sea.
-    *
-    * @author [A. Gianotto] [<snipe@snipe.net>]
-    * @since [v1.0]
-    * @param int $licenseId
-    * @return \Illuminate\Http\RedirectResponse
+     * Generates the next free seat ID for checkout.
+     *
+     * @todo This is a dumb way to solve this problem.
+     * Author should refactor. And go hide in a hole and
+     * think about what she's done. And perhaps find a new
+     * line of work. And get in the sea.
+     *
+     * @author [A. Gianotto] [<snipe@snipe.net>]
+     * @since [v1.0]
+     * @param int $licenseId
+     * @return \Illuminate\Http\RedirectResponse
      */
     public function getFreeLicense($licenseId)
     {
