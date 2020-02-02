@@ -659,11 +659,11 @@
                          'id' => 'bulkForm']) }}
               <div id="toolbar">
                 <select name="bulk_actions" class="form-control select2" style="width: 150px;">
-                  <option value="edit">Edit</option>
-                  <option value="delete">Delete</option>
-                  <option value="labels">Generate Labels</option>
+                  <option value="edit">{{ trans('general.Edit') }}</option>
+                  <option value="delete">{{ trans('general.Delete') }}</option>
+                  <option value="labels">{{ trans('general.Generate_Labels') }}</option>
                 </select>
-                <button class="btn btn-primary" id="bulkEdit" disabled>Go</button>
+                <button class="btn btn-primary" id="bulkEdit" disabled>{{ trans('button.Go') }}</button>
               </div>
 
               <!-- checked out assets table -->
@@ -703,7 +703,7 @@
             <div class="col-md-12">
                 @can('update', \App\Models\Asset::class)
                 <div id="maintenance-toolbar">
-                  <a href="{{ route('maintenances.create', ['asset_id' => $asset->id]) }}" class="btn btn-primary">Add Maintenance</a>
+                  <a href="{{ route('maintenances.create', ['asset_id' => $asset->id]) }}" class="btn btn-primary">{{ trans('admin/hardware/general.Add_Maintenance') }}</a>
                 </div>
                 @endcan
 

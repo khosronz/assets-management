@@ -26,7 +26,8 @@ class LicenseSeatsTransformer
         $array = [
             'id' => (int) $seat->id,
             'license_id' => (int) $seat->license->id,
-            'name' => 'Seat '.$seat_count,
+
+            'name' => trans('admin/licenses/general.seat').$seat_count,
             'assigned_user' => ($seat->user) ? [
                 'id' => (int) $seat->user->id,
                 'name'=> e($seat->user->present()->fullName),

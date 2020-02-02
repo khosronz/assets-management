@@ -84,7 +84,8 @@ class AssetMaintenancesController extends Controller
 
         // Prepare Asset Maintenance Type List
         $assetMaintenanceType = [
-                                    '' => 'Select an asset maintenance type',
+                trans('admin/asset_maintenances/general.Select_an_asset_maintenance_type') => trans('admin/asset_maintenances/general.Select_an_asset_maintenance_type'),
+
                                 ] + AssetMaintenance::getImprovementOptions();
         // Mark the selected asset, if it came in
 
