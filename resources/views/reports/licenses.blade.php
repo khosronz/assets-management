@@ -45,7 +45,6 @@
                                 <th class="col-sm-1 text-right">{{ trans('admin/hardware/table.diff') }}</th>
                             </tr>
                         </thead>
-
                         <tbody>
                             @foreach ($licenses as $license)
                             <tr>
@@ -60,8 +59,8 @@
                                 </td>
                                 <td>{{ $license->seats }}</td>
                                 <td>{{ $license->remaincount() }}</td>
-                                <td>{{ jdate($license->expiration_date)->format('date') }}</td>
-                                <td>{{ jdate($license->purchase_date)->format('date') }}</td>
+                                <td>{{ jdate($license->expiration_date) }}</td>
+                                <td>{{ jdate($license->purchase_date) }}</td>
                                 <td class="text-right">
                                     {{ $snipeSettings->default_currency }}{{ \App\Helpers\Helper::formatCurrencyOutput($license->purchase_cost) }}
                                 </td>

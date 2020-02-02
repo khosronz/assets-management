@@ -4,7 +4,8 @@ if (!function_exists('persianToGregorianDate')) {
     function persianToGregorianDate($date)
     {
         $date = explode("-", $date);
-        $day = $date[2];
+        $day = explode(" ", $date[2]);
+        $day=$day[0];
         $month = $date[1];
         $year = $date[0];
         $date = \Morilog\Jalali\CalendarUtils::toGregorian($year, $month, $day);

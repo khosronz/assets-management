@@ -119,7 +119,7 @@ class LicensesController extends Controller
         foreach ($licenses as $license) {
             $license->expiration_date = jdate($license->expiration_date);
         }
-
+//        dd($licenses);
         return (new LicensesTransformer)->transformLicenses($licenses, $total);
 
     }
