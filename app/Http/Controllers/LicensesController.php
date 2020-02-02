@@ -166,9 +166,9 @@ class LicensesController extends Controller
         }
 
 
-        $expiration_date = $this->persianToGregorianDate($request->input('expiration_date'));
-        $termination_date = $this->persianToGregorianDate($request->input('termination_date'));
-        $purchase_date = $this->persianToGregorianDate($request->input('purchase_date'));
+        $expiration_date = persianToGregorianDate($request->input('expiration_date'));
+        $termination_date = persianToGregorianDate($request->input('termination_date'));
+        $purchase_date = persianToGregorianDate($request->input('purchase_date'));
 
         $this->authorize('update', $license);
 
@@ -199,17 +199,6 @@ class LicensesController extends Controller
         }
         // If we can't adjust the number of seats, the error is flashed to the session by the event handler in License.php
         return redirect()->back()->withInput()->withErrors($license->getErrors());
-    }
-
-    public function persianToGregorianDate($date)
-    {
-        $date = explode("-", $date);
-        $day = $date[2];
-        $month = $date[1];
-        $year = $date[0];
-        $date = \Morilog\Jalali\CalendarUtils::toGregorian($year, $month, $day);
-        $date = $date[0] . '-' . $date[1] . '-' . $date[2];
-        return $date;
     }
 
     /**
