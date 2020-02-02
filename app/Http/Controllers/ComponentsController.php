@@ -85,7 +85,7 @@ class ComponentsController extends Controller
         $component->order_number           = $request->input('order_number', null);
         $component->min_amt                = $request->input('min_amt', null);
         $component->serial                 = $request->input('serial', null);
-        $component->purchase_date          = $request->input('purchase_date', null);
+        $component->purchase_date          = persianToGregorianDate($request->input('purchase_date', null));
         $component->purchase_cost          = $request->input('purchase_cost', null);
         $component->qty                    = $request->input('qty');
         $component->user_id                = Auth::id();
@@ -151,7 +151,7 @@ class ComponentsController extends Controller
         $component->order_number           = Input::get('order_number');
         $component->min_amt                = Input::get('min_amt');
         $component->serial                 = Input::get('serial');
-        $component->purchase_date          = Input::get('purchase_date');
+        $component->purchase_date          = persianToGregorianDate(Input::get('purchase_date'));
         $component->purchase_cost          = request('purchase_cost');
         $component->qty                    = Input::get('qty');
 

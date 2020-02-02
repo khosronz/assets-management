@@ -81,7 +81,7 @@ class ConsumablesController extends Controller
         $consumable->manufacturer_id        = $request->input('manufacturer_id');
         $consumable->model_number           = $request->input('model_number');
         $consumable->item_no                = $request->input('item_no');
-        $consumable->purchase_date          = $request->input('purchase_date');
+        $consumable->purchase_date          = persianToGregorianDate($request->input('purchase_date'));
         $consumable->purchase_cost          = Helper::ParseFloat($request->input('purchase_cost'));
         $consumable->qty                    = $request->input('qty');
         $consumable->user_id                = Auth::id();
@@ -146,7 +146,7 @@ class ConsumablesController extends Controller
         $consumable->manufacturer_id        = $request->input('manufacturer_id');
         $consumable->model_number           = $request->input('model_number');
         $consumable->item_no                = $request->input('item_no');
-        $consumable->purchase_date          = $request->input('purchase_date');
+        $consumable->purchase_date          = persianToGregorianDate($request->input('purchase_date'));
         $consumable->purchase_cost          = Helper::ParseFloat(Input::get('purchase_cost'));
         $consumable->qty                    = Helper::ParseFloat(Input::get('qty'));
 

@@ -19,7 +19,7 @@
   <div class="col-md-12">
 
     <div class="box box-default">
-      <div class="box-body">
+      <div class="bxo-body">
         <table
                 data-columns="{{ \App\Presenters\ConsumablePresenter::dataTableLayout() }}"
                 data-cookie-id-table="consumablesTable"
@@ -37,6 +37,7 @@
                 id="consumablesTable"
                 class="table table-striped snipe-table"
                 data-url="{{ route('api.consumables.index') }}"
+                {{--data-url="{{ $consumables }}"--}}
                 data-export-options='{
                 "fileName": "export-consumables-{{ date('Y-m-d') }}",
                 "ignoreColumn": ["actions","image","change","checkbox","checkincheckout","icon"]

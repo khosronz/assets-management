@@ -69,6 +69,9 @@ class ComponentsController extends Controller
 
         $total = $components->count();
         $components = $components->skip($offset)->take($limit)->get();
+        foreach ($components as $component) {
+            $component->purchase_date = jdate($component->purchase_date);
+        }
         return (new ComponentsTransformer)->transformComponents($components, $total);
     }
 

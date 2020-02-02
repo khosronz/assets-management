@@ -76,6 +76,9 @@ class ConsumablesController extends Controller
 
         $total = $consumables->count();
         $consumables = $consumables->skip($offset)->take($limit)->get();
+        foreach ($consumables as $consumable) {
+            $consumable->purchase_date = jdate($consumable->purchase_date);
+        }
         return (new ConsumablesTransformer)->transformConsumables($consumables, $total);
 
     }
