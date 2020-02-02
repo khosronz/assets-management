@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Barcode Settings
+    {{ trans('admin/settings/general.Update_Barcode_Settings') }}
     @parent
 @stop
 
@@ -32,7 +32,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-barcode"></i> Barcodes
+                        <i class="fa fa-barcode"></i>{{ trans('admin/settings/general.Barcodes') }}
                     </h4>
                 </div>
                 <div class="box-body">
@@ -99,14 +99,14 @@
                             </div>
                             <div class="col-md-9">
                                 @if ($setting->qr_code == 1)
-                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control','placeholder' => 'Property of Your Company',
+                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control','placeholder' => 'مالکیت شرکت شما',
                                     'rel' => 'txtTooltip',
                                     'title' =>'Extra text that you would like to display on your labels. ',
                                     'data-toggle' =>'tooltip',
                                     'data-placement'=>'top')) }}
                                     {!! $errors->first('qr_text', '<span class="alert-msg">:message</span>') !!}
                                 @else
-                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control', 'disabled'=>'disabled','placeholder' => 'Property of Your Company')) }}
+                                    {{ Form::text('qr_text', Input::old('qr_text', $setting->qr_text), array('class' => 'form-control', 'disabled'=>'disabled','placeholder' => 'مالکیت شرکت شما')) }}
                                     <p class="help-block">{{ trans('admin/settings/general.qr_help') }}</p>
                                 @endif
                             </div>

@@ -190,7 +190,7 @@
             </div><!-- /.responsive -->
           </div><!-- /.col -->
           <div class="col-md-12 text-center" style="padding-top: 10px;">
-            <a href="{{ route('reports.activity') }}" class="btn btn-primary btn-sm" style="width: 100%">View All</a>
+            <a href="{{ route('reports.activity') }}" class="btn btn-primary btn-sm" style="width: 100%">{{ trans('general.View_All') }}</a>
           </div>
         </div><!-- /.row -->
       </div><!-- ./box-body -->
@@ -202,7 +202,7 @@
     <div class="col-md-6">
         <div class="box box-default">
             <div class="box-header with-border">
-                <h3 class="box-title">{{ trans('general.assets') }} by Status</h3>
+                <h3 class="box-title">{{ trans('general.assets_by_status') }}</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                     </button>
@@ -225,7 +225,7 @@
         <!-- Categories -->
         <div class="box box-default">
             <div class="box-header with-border">
-                <h3 class="box-title">Asset {{ trans('general.categories') }}</h3>
+                <h3 class="box-title">{{ trans('general.asset_categories') }}</h3>
                 <div class="box-tools pull-right">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                     </button>
@@ -261,7 +261,7 @@
                         </div>
                     </div> <!-- /.col -->
                     <div class="col-md-12 text-center" style="padding-top: 10px;">
-                        <a href="{{ route('categories.index') }}" class="btn btn-primary btn-sm" style="width: 100%">View All</a>
+                        <a href="{{ route('categories.index') }}" class="btn btn-primary btn-sm" style="width: 100%">{{ trans('general.View_All') }}</a>
                     </div>
                 </div> <!-- /.row -->
 

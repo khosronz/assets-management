@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update LDAP/AD Settings
+    {{ trans('admin/settings/general.Update_LDAP/AD_Settings') }}
     @parent
 @stop
 

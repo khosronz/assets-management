@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Alert Settings
+    {{ trans('admin/settings/general.Update_Alert_Settings') }}
     @parent
 @stop
 
@@ -32,7 +32,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-bell"></i> Alerts
+                        <i class="fa fa-bell"></i> {{ trans('admin/settings/general.alerts') }}
                     </h4>
                 </div>
                 <div class="box-body">
@@ -73,7 +73,7 @@
                                 {{ Form::text('alert_email', Input::old('alert_email', $setting->alert_email), array('class' => 'form-control','placeholder' => 'admin@yourcompany.com')) }}
                                 {!! $errors->first('alert_email', '<span class="alert-msg">:message</span><br>') !!}
 
-                                <p class="help-block">Email addresses or distribution lists you want alerts to be sent to, comma separated</p>
+                                <p class="help-block">{{ trans('admin/settings/general.Email addresses or distribution lists you want alerts to be sent to, comma separated') }}</p>
 
 
                             </div>
@@ -86,7 +86,7 @@
                                 {{ Form::label('admin_cc_email', trans('admin/settings/general.admin_cc_email')) }}
                             </div>
                             <div class="col-md-7">
-                                {{ Form::text('admin_cc_email', Input::old('admin_cc_email', $setting->admin_cc_email), array('class' => 'form-control','placeholder' => 'admin@yourcompany.com')) }}
+                                {{ Form::text('admin_cc_email', Input::old('admin_cc_email', $setting->admin_cc_email), array('class' => 'form-control','placeholder' => 'ansari.it94@gmail.com')) }}
                                 {!! $errors->first('admin_cc_email', '<span class="alert-msg">:message</span><br>') !!}
 
                                 <p class="help-block">{{ trans('admin/settings/general.admin_cc_email_help') }}</p>

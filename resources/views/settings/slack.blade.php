@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Slack Settings
+    {{ trans('admin/settings/general.Update_Slack_Settings') }}
     @parent
 @stop
 
@@ -32,7 +32,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-slack"></i> Slack
+                        <i class="fa fa-slack"></i> {{ trans('admin/settings/general.Slack') }}
                     </h4>
                 </div>
                 <div class="box-body">

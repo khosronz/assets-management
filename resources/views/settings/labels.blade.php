@@ -2,7 +2,7 @@
 
 {{-- Page title --}}
 @section('title')
-    Update Label Settings
+    {{ trans('admin/settings/general.Update_Label_Settings') }}
     @parent
 @stop
 
@@ -32,7 +32,7 @@
             <div class="panel box box-default">
                 <div class="box-header with-border">
                     <h4 class="box-title">
-                        <i class="fa fa-tags"></i> Labels
+                        <i class="fa fa-tags"></i> {{ trans('admin/settings/general.Labels') }}
                     </h4>
                 </div>
                 <div class="box-body">

@@ -69,9 +69,9 @@
     <table class="table table-striped permissions">
         <thead>
         <tr class="permissions-row">
-            <th class="col-md-5">Permission</th>
-            <th class="col-md-1">Grant</th>
-            <th class="col-md-1">Deny</th>
+            <th class="col-md-5">{{ trans('admin/groups/table.Permission') }}</th>
+            <th class="col-md-1">{{ trans('admin/groups/table.Grant') }}</th>
+            <th class="col-md-1">{{ trans('admin/groups/table.Deny') }}</th>
         </tr>
         </thead>
         <tbody class="permissions-group">

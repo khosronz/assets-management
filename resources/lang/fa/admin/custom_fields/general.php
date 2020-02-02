@@ -1,13 +1,13 @@
 <?php
 
 return array(
-    'Manage_custom_fields'		        => ' مدیریت فیلدهای سفارشی',
+    'Manage_custom_fields'		  => ' مدیریت فیلدهای سفارشی',
     'custom_fields'		        => 'فیلدهای سفارشی',
     'field'		                => 'فیلد',
     'about_fieldsets_title'		=> 'درباره ی تنظیمات فیلد',
     'about_fieldsets_text'		=> 'تنظیمات فیلد به شما امکان این را می دهد که گروه های فیلدهای سفارشی ایجاد کنید که مرتبا برای انواع مدل های دارایی خاص مورد استفاده ی مجدد قرار می گیرند.',
     'custom_format'             => 'قالب سفارشی ...',
-    'encrypt_field'      	        => 'مقدار این فیلد را در پایگاه داده رمزگذاری کنید',
+    'encrypt_field'      	    => 'مقدار این فیلد را در پایگاه داده رمزگذاری کنید',
     'encrypt_field_help'      => 'هشدار: رمزگذاری یک فیلد باعث می شود آن را جستجو نکنید.',
     'encrypted'      	        => 'رمزگذاری شده',
     'fieldset'      	        => 'تنظیمات فیلد',
@@ -29,6 +29,8 @@ return array(
     'create_fieldset'         => 'تنظیمات فیلد جدید',
     'create_field'            => 'فیلد سفارشی جدید',
     'Help_Text'            => 'متن راهنما',
+    'Email'            => 'ایمیل',
+    'DB_Field'            => 'فیلد دیتابیس',
     'About_Fieldsets'            => 'درباره مجموعه فیلدها',
     'Fieldsets work like containers of the custom fields'            => 'مجموعه فیلد ها مانند کانتینرهایی از زمینه‌های سفارشی که شما ایجاد کرده‌اید کار می‌کند . این به شما این امکان را می‌دهد که به طور معمول از ویژگی‌های سفارشی برای انجمن‌های ساده استفاده کنید .',
     'This is optional text that will appear below the form elements while editing an asset to provide context on the field.'            => 'این متن اختیاری است که در زیر عناصر شکل ظاهر می‌شود در حالی که یک دارایی را ویرایش می‌کند تا زمینه را در این زمینه فراهم کند .',

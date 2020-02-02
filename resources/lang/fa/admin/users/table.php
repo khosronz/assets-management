@@ -35,4 +35,7 @@ return array(
     'username_note' 		=> '(این فقط برای فعال سازی راهنمای اتصال است ،نه برای وارد شدن)',
     'cloneuser'             => ' کاربر کلون',
     'viewusers' 			=> 'مشاهده کاربران',
+    'Permissions' 			=> 'مجوز دسترسی',
+    'Information' 			=> 'اطلاعات',
+
 );

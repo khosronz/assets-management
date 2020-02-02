@@ -12,5 +12,7 @@ return array(
     'submit'  	                => 'ثبت کردن',
     'upload'                    => 'بارگزاری',
 	'select_file'				=> 'فایل را انتخاب کنید...',
-    'select_files'				=> 'Select Files...',
+    'select_files'				=> 'انتخاب پرونده‌ها …',
+    'Select_Import_File'				=> 'انتخاب وارد کردن پرونده …',
+    'Go'				=> 'شروع',
 );

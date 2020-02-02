@@ -51,11 +51,11 @@
                       'id' => 'bulkForm']) }}
                   <div id="toolbar">
                       <select name="bulk_actions" class="form-control select2">
-                          <option value="edit">Edit</option>
-                          <option value="delete">Delete</option>
-                          <option value="labels">Generate Labels</option>
+                          <option value="edit">{{ trans('admin/models/general.Edit') }}</option>
+                          <option value="delete">{{ trans('admin/models/general.Delete') }}</option>
+                          <option value="labels">{{ trans('admin/models/general.Generate_Labels') }}</option>
                       </select>
-                      <button class="btn btn-primary" id="bulkEdit" disabled>Go</button>
+                      <button class="btn btn-primary" id="bulkEdit" disabled>{{ trans('admin/models/general.Go') }}</button>
                   </div>
 
                   <table
@@ -90,7 +90,7 @@
       <div class="box box-default">
               <div class="box-header with-border">
                   <div class="box-heading">
-                      <h3 class="box-title"> More Info:</h3>
+                      <h3 class="box-title">{{ trans('admin/models/general.More_Info') }}:</h3>
                   </div>
               </div><!-- /.box-header -->
           <div class="box-body">
