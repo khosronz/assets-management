@@ -22,6 +22,7 @@ return array(
     'Custom_Export'  			=> 'صدور سفارشی',
     'Edit'  			=> 'ویرایش',
     'Delete'  			=> 'حذف',
+    'Add_Maintenance'  			=> 'اضافه کردن تعمیرات',
     'Try_to_match_users_by_first_initial_last_name_(ansari)_format'  			=> 'سعی کنید کاربران را با قالب اول نام خانوادگی (ansari) مطابقت دهید',
     'Try_to_match_users_by_first_name_(ghader)_format'  			=> 'سعی کنید کاربران را با قالب نام اول (ghader) مطابقت دهید',
     'Try_to_match_users_by_email_as_username'  			=> 'سعی کنید کاربران را از طریق ایمیل به عنوان نام کاربری مطابقت دهید',

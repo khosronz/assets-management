@@ -209,7 +209,7 @@
     'unknown_admin'			=> 'نامشخص مدیریت',
     'username_format'		=> 'فرمت نام کاربری',
     'update'                => 'بروزرسانی',
-    'upload_filetypes_help'      => 'Allowed filetypes are png, gif, jpg, jpeg, doc, docx, pdf, xls, txt, lic, zip, and rar. Max upload size allowed is :size.',
+    'upload_filetypes_help'      => 'فایل های مجاز عبارتند از png ، gif ، jpg ، jpeg ، doc ، docx ، pdf ، xls ، txt ، lic ، zip ، zip ، rar . حداکثر اندازه بارگذاری مجاز است :size.',
     'uploaded'              => 'بارگزاری شد',
     'user'					=> 'کاربر',
     'accepted'			    => 'تأیید شد',
@@ -241,5 +241,7 @@
     'You_have'  			=> 'شما باید',
     'items below or almost below minimum quantity levels'  			=> 'مورد زیر یا تقریباً کمتر از حداقل مقدار آن دارید',
     'Generate_Labels'  			=> 'برچسب‌ها را تولید کنید',
+    'Upload_File'  			=> 'بارگذاری پرونده',
+    'Details'  			=> 'جزئیات',
 
     ];

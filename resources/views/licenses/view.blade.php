@@ -29,7 +29,7 @@
     <!-- Custom Tabs -->
     <div class="nav-tabs-custom">
       <ul class="nav nav-tabs">
-        <li class="active"><a href="#details" data-toggle="tab">Details</a></li>
+        <li class="active"><a href="#details" data-toggle="tab">{{ trans('general.Details') }}</a></li>
         <li><a href="#uploads" data-toggle="tab">{{ trans('general.file_uploads') }}</a></li>
         <li><a href="#history" data-toggle="tab">{{ trans('admin/licenses/general.checkout_history') }}</a></li>
         <li class="pull-right"><a href="#" data-toggle="modal" data-target="#uploadFileModal"><i class="fa fa-paperclip"></i> {{ trans('button.upload') }}</a></li>
