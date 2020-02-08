@@ -209,7 +209,7 @@
     'unknown_admin'			=> 'نامشخص مدیریت',
     'username_format'		=> 'فرمت نام کاربری',
     'update'                => 'بروزرسانی',
-    'upload_filetypes_help'      => 'فایل های مجاز عبارتند از png ، gif ، jpg ، jpeg ، doc ، docx ، pdf ، xls ، txt ، lic ، zip ، zip ، rar . حداکثر اندازه بارگذاری مجاز است :size.',
+    'image_filetypes_help'      => 'فایل های مجاز عبارتند از png ، gif ، jpg ، jpeg ، doc ، docx ، pdf ، xls ، txt ، lic ، zip ، zip ، rar . حداکثر اندازه بارگذاری مجاز است :size.',
     'uploaded'              => 'بارگزاری شد',
     'user'					=> 'کاربر',
     'accepted'			    => 'تأیید شد',

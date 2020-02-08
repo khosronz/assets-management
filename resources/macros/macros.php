@@ -46,7 +46,7 @@ Form::macro('locales', function ($name = "locale", $selected = null, $class = nu
       'mi'=> "Maori",
       'mn'=> "Mongolian",
       'no'=> "Norwegian",
-      'fa'=> "Persian",
+      'fa'=> "فارسی",
       'pl'=> "Polish",
       'pt-PT'=> "Portuguese",
       'pt-BR'=> "Portuguese, Brazilian",
